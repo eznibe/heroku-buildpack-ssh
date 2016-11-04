@@ -19,6 +19,7 @@ echo "Starting sshd for $(whoami)"
 # Start the tunnel
 ngrok_cmd="ngrok tcp -log stdout ${NGROK_OPTS} ${ssh_port}"
 echo "Starting ngrok tunnel"
+echo "with_ssh: ngrok tcp -log stdout ${NGROK_OPTS} ${ssh_port}"
 eval "$ngrok_cmd &"
 
 eval "$@"

@@ -18,5 +18,6 @@ EOF
   # Start the tunnel
   ngrok_cmd="ngrok tcp -log stdout ${NGROK_OPTS} ${ssh_port}"
   echo "Starting ngrok tunnel"
+  echo "sshd: ngrok tcp -log stdout ${NGROK_OPTS} ${ssh_port}"
   eval "$ngrok_cmd &"
 fi
