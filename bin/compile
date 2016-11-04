@@ -21,11 +21,14 @@ mkdir -p $BUILD_DIR/.heroku/bin
 curl --silent --retry 3 -o ngrok.zip -L "https://dl.ngrok.com/ngrok_2.0.19_linux_amd64.zip" | indent
 echo -n "-----> Installing ngrok 2... "
 unzip ngrok.zip -d $BUILD_DIR/.heroku/bin > /dev/null 2>&1
+echo -n "-----> Installing ngrok 3... "
 chmod +x $BUILD_DIR/.heroku/bin/ngrok
+echo -n "-----> Installing ngrok 4... "
 
 cat << EOF > $BUILD_DIR/.profile.d/ngrok.sh
+echo -n "-----> Installing ngrok 5... "
 export PATH=\$HOME/.heroku/bin:\$PATH
-echo -n "-----> Installing ngrok 3... "
+echo -n "-----> Installing ngrok 6... "
 EOF
 
 ######### Create profile.d startup script
