@@ -17,7 +17,8 @@ EOF
 
   # Start the tunnel
   #ngrok_cmd="ngrok tcp -log stdout ${NGROK_OPTS} ${ssh_port}"
-  ngrok_cmd="ngrok start --config .heroku/bin/ngrok-tcp-config --all -log stdout"
+  #ngrok_cmd="ngrok start --config .heroku/bin/ngrok-tcp-config --all -log stdout"
+  ngrok_cmd="ngrok http 4040"
   echo "Starting ngrok tunnel"
   echo "sshd: $ngrok_cmd"
   eval "$ngrok_cmd &"
