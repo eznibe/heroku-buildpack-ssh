@@ -3,9 +3,11 @@ tunnels:
   node-inspector-access:
    addr: 8000
    proto: http
+   bind-tls: false
   ngrok-access:
    addr: 4040
    proto: http
+   bind-tls: false
   ssh-access:
    addr: 2222
    proto: tcp
