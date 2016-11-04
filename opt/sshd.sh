@@ -12,7 +12,7 @@ if [ "$DYNO" != *run.* ] && [ "$SSH_ENABLED" = "true" ]; then
 Connected to $DYNO
 EOF
 
-  echo "Starting sshd for $(whoami)"
+  echo -n "-----> Starting sshd for $(whoami)"
   /usr/sbin/sshd -f /app/.ssh/sshd_config -o "Port ${ssh_port}" -o "Banner ${banner_file}"
 
   # Start the tunnel
