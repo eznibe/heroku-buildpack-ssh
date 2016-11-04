@@ -1,8 +1,11 @@
 authtoken: hhbdwe7FXbQTBZGuXhUS_i9MUVPJnfn7N87hPAa8B
 tunnels:
-  ngrok-http-access:
+  node-inspector-access:
    addr: 8000
    proto: http
   ssh-access:
    addr: 2222
+   proto: tcp
+  debug-access:
+   addr: 5858
    proto: tcp
