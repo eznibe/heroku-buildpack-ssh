@@ -1,0 +1,8 @@
+authtoken: hhbdwe7FXbQTBZGuXhUS_i9MUVPJnfn7N87hPAa8B
+tunnels:
+  ssh-access:
+   addr: 2222
+   proto: tcp
+  debug-access:
+   addr: 5858
+   proto: tcp

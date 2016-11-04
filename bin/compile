@@ -13,6 +13,7 @@ CACHE_DIR=$2
 
 BP_DIR="$(cd "$(dirname "$0")" && pwd)"
 OPT_DIR=$BP_DIR/../opt/
+CONFIG_DIR=$BP_DIR/../config/
 
 ######### Install ngrok
 echo -n "-----> Installing ngrok... "
@@ -24,14 +25,11 @@ echo -n "-----> Installing ngrok 2... "
 #echo -n $BUILD_DIR/.heroku/bin
 #ls -l ngrok.zip
 unzip ngrok.zip -d $BUILD_DIR/.heroku/bin > /dev/null 2>&1
-echo -n "-----> Installing ngrok 3... "
 chmod +x $BUILD_DIR/.heroku/bin/ngrok
-echo -n "-----> Installing ngrok 4... "
 
 cat << EOF > $BUILD_DIR/.profile.d/ngrok.sh
-echo -n "-----> Installing ngrok 5... "
 export PATH=\$HOME/.heroku/bin:\$PATH
-echo -n "-----> Installing ngrok 6... "
+echo -n "-----> Finished installing ngrok... "
 EOF
 
 ######### Create profile.d startup script
@@ -40,6 +38,10 @@ cp ${OPT_DIR}/sshd.sh $BUILD_DIR/.profile.d/sshd.sh
 ######### Install SSH launcher
 cp $OPT_DIR/with_ssh $BUILD_DIR/.heroku/bin/with_ssh
 chmod +x $BUILD_DIR/.heroku/bin/with_ssh
+
+######### Install SSH launcher
+cp $CONFIG_DIR/ngrok-tcp-config $BUILD_DIR/.heroku/bin/ngrok-tcp-config
+chmod +x $BUILD_DIR/.heroku/bin/ngrok-tcp-config
 
 ######### Configure SSH Daemon
 # TODO get key from config var if available
