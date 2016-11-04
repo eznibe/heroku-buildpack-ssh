@@ -1,7 +1,7 @@
 authtoken: hhbdwe7FXbQTBZGuXhUS_i9MUVPJnfn7N87hPAa8B
 tunnels:
   ngrok-http-access:
-   addr: 4040
+   addr: 8000
    proto: http
   debug-access:
    addr: 5858
