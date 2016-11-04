@@ -1,6 +1,5 @@
 authtoken: hhbdwe7FXbQTBZGuXhUS_i9MUVPJnfn7N87hPAa8B
 tunnels:
-  ngrok-http-access:
-   addr: 80
-   proto: http
-   host_header: app-foo.dev
+  ngrok-tcp-access:
+   addr: 4040
+   proto: tcp
