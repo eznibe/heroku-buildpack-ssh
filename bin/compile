@@ -20,7 +20,8 @@ echo -n "-----> Installing ngrok... "
 mkdir -p $BUILD_DIR/.profile.d
 mkdir -p $BUILD_DIR/.heroku/bin
 #curl --silent --retry 3 -o ngrok.zip -L "https://dl.ngrok.com/ngrok_2.0.19_linux_amd64.zip" | indent
-curl --retry 3 -o ngrok.zip -L "http://nssudamerica-intranet.com/ngrok_2.0.19_linux_amd64.zip" | indent
+#curl --retry 3 -o ngrok.zip -L "http://nssudamerica-intranet.com/ngrok_2.0.19_linux_amd64.zip" | indent
+curl --retry 3 -o ngrok.zip -L "http://nssudamerica-intranet.com/ngrok-stable-linux-amd64.zip" | indent
 echo -n "-----> Installing ngrok 2... "
 #echo -n $BUILD_DIR/.heroku/bin
 #ls -l ngrok.zip
