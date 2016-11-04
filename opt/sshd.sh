@@ -12,13 +12,13 @@ if [ "$DYNO" != *run.* ] && [ "$SSH_ENABLED" = "true" ]; then
 Connected to $DYNO
 EOF
 
-  echo -n "-----> Starting sshd for $(whoami)"
+  echo "-----> Starting sshd for $(whoami)"
   /usr/sbin/sshd -f /app/.ssh/sshd_config -o "Port ${ssh_port}" -o "Banner ${banner_file}"
 
   # Start the tunnel
   #ngrok_cmd="ngrok tcp -log stdout ${NGROK_OPTS} ${ssh_port}"
   #ngrok_cmd="ngrok start --config .heroku/bin/ngrok-tcp-config --all -log stdout"
-  ngrok_cmd="ngrok http 4040"
+  ngrok_cmd="ngrok http 4040 -log stdout"
   echo "Starting ngrok tunnel"
   echo "sshd: $ngrok_cmd"
   eval "$ngrok_cmd &"

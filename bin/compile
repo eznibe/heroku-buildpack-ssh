@@ -29,7 +29,7 @@ chmod +x $BUILD_DIR/.heroku/bin/ngrok
 
 cat << EOF > $BUILD_DIR/.profile.d/ngrok.sh
 export PATH=\$HOME/.heroku/bin:\$PATH
-echo -n "-----> Ruunin ngrok.sh... "
+echo -n "-----> Running ngrok.sh... "
 EOF
 
 ######### Create profile.d startup script
