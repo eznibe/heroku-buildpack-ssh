@@ -42,8 +42,9 @@ chmod +x $BUILD_DIR/.heroku/bin/with_ssh
 ######### Install SSH launcher
 cp $CONFIG_DIR/ngrok-tcp-config $BUILD_DIR/.heroku/bin/ngrok-tcp-config
 chmod +x $BUILD_DIR/.heroku/bin/ngrok-tcp-config
-ls $BUILD_DIR/.heroku/bin/ngrok-tcp-config
-echo -n "-----> LS config file... "
+
+#ls $BUILD_DIR/.heroku/bin/ngrok-tcp-config
+#echo -n "-----> LS config file... "
 
 ######### Configure SSH Daemon
 # TODO get key from config var if available
