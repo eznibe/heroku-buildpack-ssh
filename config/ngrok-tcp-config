@@ -6,3 +6,6 @@ tunnels:
   debug-access:
    addr: 5858
    proto: tcp
+  ngrok-access:
+   addr: 4040
+   proto: http
