@@ -10,7 +10,7 @@ if [ "$DYNO" != *run.* ] && [ "$SSH_ENABLED" = "true" ]; then
   REPLACE_STR="s/NGROK_API_TOKEN/${NGROK_API_TOKEN}/g"
   sed -i ${REPLACE_STR} .heroku/bin/ngrok-config
 
-  cat .heroku/bin/ngrok-config
+  #cat .heroku/bin/ngrok-config
 
   banner_file="/app/.ssh/banner.txt"
   cat << EOF > ${banner_file}
