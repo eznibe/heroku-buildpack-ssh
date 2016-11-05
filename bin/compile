@@ -41,8 +41,8 @@ cp $OPT_DIR/with_ssh $BUILD_DIR/.heroku/bin/with_ssh
 chmod +x $BUILD_DIR/.heroku/bin/with_ssh
 
 ######### Install SSH launcher
-cp $CONFIG_DIR/ngrok-tcp-config $BUILD_DIR/.heroku/bin/ngrok-tcp-config
-chmod +x $BUILD_DIR/.heroku/bin/ngrok-tcp-config
+cp $CONFIG_DIR/ngrok-config $BUILD_DIR/.heroku/bin/ngrok-config
+chmod +x $BUILD_DIR/.heroku/bin/ngrok-config
 
 #ls $BUILD_DIR/.heroku/bin/ngrok-tcp-config
 #echo -n "-----> LS config file... "
