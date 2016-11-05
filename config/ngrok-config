@@ -1,0 +1,16 @@
+authtoken: NGROK_API_TOKEN
+tunnels:
+  node-inspector-access:
+   addr: 8000
+   proto: http
+   bind_tls: false
+  ngrok-access:
+   addr: 4040
+   proto: http
+   bind_tls: false
+  ssh-access:
+   addr: 2222
+   proto: tcp
+  debug-access:
+   addr: 5858
+   proto: tcp
