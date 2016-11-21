@@ -26,5 +26,5 @@ EOF
   ngrok_cmd="ngrok start --config .heroku/bin/ngrok-config --all -log stdout"
   echo "Starting ngrok tunnel"
   echo "sshd: $ngrok_cmd"
-  eval "$ngrok_cmd &"
+  #eval "$ngrok_cmd &"
 fi
